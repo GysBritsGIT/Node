@@ -14,6 +14,7 @@ app.use(express.static(path.join(__dirname, '/public/')));
 app.set('views','./src/views');
 app.set('view engine', 'ejs');
 
+app.get('/index')
 app.get('/',(req, res)=>{
 res.render('index', {title: 'Gallery App', data:['a', 'b', 'c'] });
 
